@@ -16,26 +16,31 @@
 
 
 ### 二、编译
-mkdir build
-cd build
-cmake ..
-make -j
+
+	mkdir build
+	
+	cd build
+	
+	cmake ..
+	
+	make -j
 
 
 ### 三、目前支持接口
 
-extern int media_init(char *ispcfg);
-
-extern int media_uninit(void);
-
-extern int media_run(void);
-
-extern IPX_IMAGE_S* media_getframe(void);
-
-extern int media_setexptime(int ms); not
-
-extern int media_startstream(char *name,int port);
-
-extern int media_encodejpg(IPX_IMAGE_S *pstVideoFrame,IPX_RECT_S *rc,void *jpg);
+	int media_init(char *ispcfg);
+	
+	int media_uninit(void);
+	
+	int media_run(void);
+	
+	IPX_IMAGE_S* media_getframe(void);
+	
+	int media_setexptime(unsigned int exptime_us);
+	
+	int media_startstream(char *name,int port);
+	
+	int media_encodejpg(IPX_IMAGE_S *pstVideoFrame,IPX_RECT_S *rc,void *jpg);
+	
 
 
